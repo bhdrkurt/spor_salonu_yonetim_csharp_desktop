@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93A182AA-4711-498C-B9EC-3BEAD3A6BF0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>sporSalonuYonetim</RootNamespace>
+    <AssemblyName>sporSalonuYonetim</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BransEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BransEkle.Designer.cs">
+      <DependentUpon>BransEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Abstract\IGirisBilgi.cs" />
+    <Compile Include="DataAccess\GirisBilgiDal.cs" />
+    <Compile Include="Design\dataGrid.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranslar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranslar.Designer.cs">
+      <DependentUpon>frmBranslar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenelYonetimGiderEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenelYonetimGiderEkle.Designer.cs">
+      <DependentUpon>frmGenelYonetimGiderEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKasaGelirGiderIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKasaGelirGiderIslem.Designer.cs">
+      <DependentUpon>frmKasaGelirGiderIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunSatis.Designer.cs">
+      <DependentUpon>frmUrunSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUyeProfili.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUyeProfili.Designer.cs">
+      <DependentUpon>frmUyeProfili.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUyeSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUyeSil.Designer.cs">
+      <DependentUpon>frmUyeSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GirisBilgi.cs" />
+    <Compile Include="Models\KullaniciYetkiler.cs" />
+    <Compile Include="Models\Yetkiler.cs" />
+    <Compile Include="SalonYonetimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet1.cs">
+      <DependentUpon>SalonYonetimDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet10.cs">
+      <DependentUpon>SalonYonetimDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonYonetimDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonYonetimDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sqlbaglanti.cs" />
+    <Compile Include="frmAboneKayitEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboneKayitEkle.Designer.cs">
+      <DependentUpon>frmAboneKayitEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbonelikPaketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbonelikPaketleri.Designer.cs">
+      <DependentUpon>frmAbonelikPaketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbonelikPaketleriListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbonelikPaketleriListele.Designer.cs">
+      <DependentUpon>frmAbonelikPaketleriListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAktifPasifUyeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAktifPasifUyeler.Designer.cs">
+      <DependentUpon>frmAktifPasifUyeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnasayfa.Designer.cs">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankalar.Designer.cs">
+      <DependentUpon>frmBankalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFirmaBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirmaBilgileri.Designer.cs">
+      <DependentUpon>frmFirmaBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenelKasaRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenelKasaRaporu.Designer.cs">
+      <DependentUpon>frmGenelKasaRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenelYonetimGiderListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenelYonetimGiderListele.Designer.cs">
+      <DependentUpon>frmGenelYonetimGiderListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenelYonetimGiderRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenelYonetimGiderRaporu.Designer.cs">
+      <DependentUpon>frmGenelYonetimGiderRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGirisPaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGirisPaneli.Designer.cs">
+      <DependentUpon>frmGirisPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKartTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKartTanimlama.Designer.cs">
+      <DependentUpon>frmKartTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKasaGelirGiderListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKasaGelirGiderListele.Designer.cs">
+      <DependentUpon>frmKasaGelirGiderListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKasaGelirGiderRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKasaGelirGiderRaporu.Designer.cs">
+      <DependentUpon>frmKasaGelirGiderRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKullanicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullanicilar.Designer.cs">
+      <DependentUpon>frmKullanicilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelEkle.Designer.cs">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStok.Designer.cs">
+      <DependentUpon>frmStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToptanciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToptanciEkle.Designer.cs">
+      <DependentUpon>frmToptanciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToptancilariListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToptancilariListele.Designer.cs">
+      <DependentUpon>frmToptancilariListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToptanciRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToptanciRaporu.Designer.cs">
+      <DependentUpon>frmToptanciRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToptanciSilDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToptanciSilDuzenle.Designer.cs">
+      <DependentUpon>frmToptanciSilDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToptancislemYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToptancislemYap.Designer.cs">
+      <DependentUpon>frmToptancislemYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunKategorileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunKategorileri.Designer.cs">
+      <DependentUpon>frmUrunKategorileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunler.Designer.cs">
+      <DependentUpon>frmUrunler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunleriListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunleriListele.Designer.cs">
+      <DependentUpon>frmUrunleriListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunSatisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunSatisEkrani.Designer.cs">
+      <DependentUpon>frmUrunSatisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunSatisRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunSatisRaporu.Designer.cs">
+      <DependentUpon>frmUrunSatisRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUyeGirisCikisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUyeGirisCikisEkrani.Designer.cs">
+      <DependentUpon>frmUyeGirisCikisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUyeleriListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUyeleriListele.Designer.cs">
+      <DependentUpon>frmUyeleriListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUyeRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUyeRaporu.Designer.cs">
+      <DependentUpon>frmUyeRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYardim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYardim.Designer.cs">
+      <DependentUpon>frmYardim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYeniKayitEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYeniKayitEkle.Designer.cs">
+      <DependentUpon>frmYeniKayitEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ExcelTool.cs" />
+    <EmbeddedResource Include="BransEkle.resx">
+      <DependentUpon>BransEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBranslar.resx">
+      <DependentUpon>frmBranslar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenelYonetimGiderEkle.resx">
+      <DependentUpon>frmGenelYonetimGiderEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKasaGelirGiderIslem.resx">
+      <DependentUpon>frmKasaGelirGiderIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAboneKayitEkle.resx">
+      <DependentUpon>frmAboneKayitEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbonelikPaketleri.resx">
+      <DependentUpon>frmAbonelikPaketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbonelikPaketleriListele.resx">
+      <DependentUpon>frmAbonelikPaketleriListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAktifPasifUyeler.resx">
+      <DependentUpon>frmAktifPasifUyeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnasayfa.resx">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankalar.resx">
+      <DependentUpon>frmBankalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFirmaBilgileri.resx">
+      <DependentUpon>frmFirmaBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenelKasaRaporu.resx">
+      <DependentUpon>frmGenelKasaRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenelYonetimGiderListele.resx">
+      <DependentUpon>frmGenelYonetimGiderListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenelYonetimGiderRaporu.resx">
+      <DependentUpon>frmGenelYonetimGiderRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGirisPaneli.resx">
+      <DependentUpon>frmGirisPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKartTanimlama.resx">
+      <DependentUpon>frmKartTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKasaGelirGiderListele.resx">
+      <DependentUpon>frmKasaGelirGiderListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKasaGelirGiderRaporu.resx">
+      <DependentUpon>frmKasaGelirGiderRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullanicilar.resx">
+      <DependentUpon>frmKullanicilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelEkle.resx">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStok.resx">
+      <DependentUpon>frmStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToptanciEkle.resx">
+      <DependentUpon>frmToptanciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToptancilariListele.resx">
+      <DependentUpon>frmToptancilariListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToptanciRaporu.resx">
+      <DependentUpon>frmToptanciRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToptanciSilDuzenle.resx">
+      <DependentUpon>frmToptanciSilDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToptancislemYap.resx">
+      <DependentUpon>frmToptancislemYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunKategorileri.resx">
+      <DependentUpon>frmUrunKategorileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunler.resx">
+      <DependentUpon>frmUrunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunleriListele.resx">
+      <DependentUpon>frmUrunleriListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunSatis.resx">
+      <DependentUpon>frmUrunSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunSatisEkrani.resx">
+      <DependentUpon>frmUrunSatisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunSatisRaporu.resx">
+      <DependentUpon>frmUrunSatisRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUyeGirisCikisEkrani.resx">
+      <DependentUpon>frmUyeGirisCikisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUyeleriListele.resx">
+      <DependentUpon>frmUyeleriListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUyeProfili.resx">
+      <DependentUpon>frmUyeProfili.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUyeRaporu.resx">
+      <DependentUpon>frmUyeRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUyeSil.resx">
+      <DependentUpon>frmUyeSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYardim.resx">
+      <DependentUpon>frmYardim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYeniKayitEkle.resx">
+      <DependentUpon>frmYeniKayitEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SalonYonetimDataSet.xsc">
+      <DependentUpon>SalonYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet.xss">
+      <DependentUpon>SalonYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet1.xsc">
+      <DependentUpon>SalonYonetimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet1.xss">
+      <DependentUpon>SalonYonetimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet10.xsc">
+      <DependentUpon>SalonYonetimDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet10.xss">
+      <DependentUpon>SalonYonetimDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet11.xsc">
+      <DependentUpon>SalonYonetimDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet11.xss">
+      <DependentUpon>SalonYonetimDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet12.xsc">
+      <DependentUpon>SalonYonetimDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet12.xss">
+      <DependentUpon>SalonYonetimDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet13.xsc">
+      <DependentUpon>SalonYonetimDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet13.xss">
+      <DependentUpon>SalonYonetimDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet14.xsc">
+      <DependentUpon>SalonYonetimDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet14.xss">
+      <DependentUpon>SalonYonetimDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet15.xsc">
+      <DependentUpon>SalonYonetimDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet15.xss">
+      <DependentUpon>SalonYonetimDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet16.xsc">
+      <DependentUpon>SalonYonetimDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet16.xss">
+      <DependentUpon>SalonYonetimDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet17.xsc">
+      <DependentUpon>SalonYonetimDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet17.xss">
+      <DependentUpon>SalonYonetimDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet18.xsc">
+      <DependentUpon>SalonYonetimDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet18.xss">
+      <DependentUpon>SalonYonetimDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet19.xsc">
+      <DependentUpon>SalonYonetimDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet19.xss">
+      <DependentUpon>SalonYonetimDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet2.xsc">
+      <DependentUpon>SalonYonetimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet2.xss">
+      <DependentUpon>SalonYonetimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet20.xsc">
+      <DependentUpon>SalonYonetimDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet20.xss">
+      <DependentUpon>SalonYonetimDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet21.xsc">
+      <DependentUpon>SalonYonetimDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet21.xss">
+      <DependentUpon>SalonYonetimDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet22.xsc">
+      <DependentUpon>SalonYonetimDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet22.xss">
+      <DependentUpon>SalonYonetimDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet23.xsc">
+      <DependentUpon>SalonYonetimDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet23.xss">
+      <DependentUpon>SalonYonetimDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet3.xsc">
+      <DependentUpon>SalonYonetimDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet3.xss">
+      <DependentUpon>SalonYonetimDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet4.xsc">
+      <DependentUpon>SalonYonetimDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet4.xss">
+      <DependentUpon>SalonYonetimDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet5.xsc">
+      <DependentUpon>SalonYonetimDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet5.xss">
+      <DependentUpon>SalonYonetimDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet6.xsc">
+      <DependentUpon>SalonYonetimDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet6.xss">
+      <DependentUpon>SalonYonetimDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet7.xsc">
+      <DependentUpon>SalonYonetimDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet7.xss">
+      <DependentUpon>SalonYonetimDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet8.xsc">
+      <DependentUpon>SalonYonetimDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet8.xss">
+      <DependentUpon>SalonYonetimDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet9.xsc">
+      <DependentUpon>SalonYonetimDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SalonYonetimDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonYonetimDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonYonetimDataSet9.xss">
+      <DependentUpon>SalonYonetimDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programSagBar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alisveristamamla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gunlukgelir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aylikgelir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yillikgelir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\takvim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saattakvim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aktif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aktifuyebuton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasifuyebuton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uyelerilistele.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borcluyeler.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

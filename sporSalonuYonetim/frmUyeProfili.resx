@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>139, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <metadata name="salonYonetimDataSet3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 57</value>
+  </metadata>
+  <metadata name="aboneKayitBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>615, 17</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>427, 17</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>427, 17</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 17</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet2BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1019, 17</value>
+  </metadata>
+  <metadata name="aboneKayitTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>417, 57</value>
+  </metadata>
+  <metadata name="ozelKayitTarih.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="islemler1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ozelAboneKayitBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>205, 97</value>
+  </metadata>
+  <metadata name="ozelKayitTarih.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="islemler1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ozelAboneKayitBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>205, 97</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 97</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 97</value>
+  </metadata>
+  <metadata name="ozelAboneKayitBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1267, 57</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>623, 57</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>623, 57</value>
+  </metadata>
+  <metadata name="ozelAboneKayitBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>811, 57</value>
+  </metadata>
+  <metadata name="ozelAboneKayitTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1042, 57</value>
+  </metadata>
+  <metadata name="ozelAboneKayitTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>443, 97</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>675, 97</value>
+  </metadata>
+  <metadata name="aboneKayitBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>863, 97</value>
+  </metadata>
+  <metadata name="aboneKayitTableAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1075, 97</value>
+  </metadata>
+  <metadata name="aboneKayitTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>820, 17</value>
+  </metadata>
+  <metadata name="islem.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="aboneKayitBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>630, 137</value>
+  </metadata>
+  <metadata name="islem.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="aboneKayitBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>630, 137</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>435, 137</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>435, 137</value>
+  </metadata>
+  <metadata name="aboneKayitBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 137</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1281, 97</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1281, 97</value>
+  </metadata>
+  <metadata name="aboneKayitTableAdapter3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>229, 137</value>
+  </metadata>
+  <metadata name="aboneKayitTableAdapter4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>842, 137</value>
+  </metadata>
+  <metadata name="yagOlcumBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 177</value>
+  </metadata>
+  <metadata name="yagOlcumBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 177</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet12.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1328, 137</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet12.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1328, 137</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet11BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1048, 137</value>
+  </metadata>
+  <metadata name="yagOlcumTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>216, 177</value>
+  </metadata>
+  <metadata name="vucutOlcumleriBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1249, 177</value>
+  </metadata>
+  <metadata name="vucutOlcumleriBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1249, 177</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet14.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1054, 177</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet14.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1054, 177</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet13.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>409, 177</value>
+  </metadata>
+  <metadata name="vucutOlcumleriTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>832, 177</value>
+  </metadata>
+  <metadata name="vucutOlcumleriTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 217</value>
+  </metadata>
+  <metadata name="vadeid.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="odeme.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="taksitTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1006, 217</value>
+  </metadata>
+  <metadata name="vadeid.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="odeme.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="taksitTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1006, 217</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet22.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>811, 217</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet22.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>811, 217</value>
+  </metadata>
+  <metadata name="ecuzdanBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>441, 217</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet15.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>246, 217</value>
+  </metadata>
+  <metadata name="salonYonetimDataSet15.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>246, 217</value>
+  </metadata>
+  <metadata name="ecuzdanTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>629, 217</value>
+  </metadata>
+  <metadata name="taksitTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1209, 217</value>
+  </metadata>
+</root>
