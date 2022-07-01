@@ -1,0 +1,5 @@
+Merhaba arkadaşlar;
+Heryerde sql kodunun olduğunun farkındayım. Ama bu ilk c# ile yaptığım form application diyebilirim. 
+Bu yüzden herhangi bir yapıya uyum sağlanmadı. Bunu geliştirmeyi düşünmedim.
+Bu benim üniversite 3.sınıf tasarım çalışması ödevimdi. Geliştirilebilir bir uygulama. 
+Doğrusu veya yanlışları ile komple sizinle paylaştım. Teşekkürler. ~~Bahadır Kurt
